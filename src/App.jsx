@@ -1,9 +1,10 @@
 import UseStateHook from "./UseStateHook"
+import UseEffectHook from "./UseEffectHook"
 
 function App() {
   return (
     <>
-      <UseStateHook />
+      <UseEffectHook />
     </>
   )
 }

@@ -1,89 +1,77 @@
-# 🚀 React.js Core Learning Roadmap
+# 🧩 React Hooks Learning Plan (With Internals)
 
-This roadmap will guide you step-by-step through learning core React.js concepts. Ideal for beginners to intermediate developers who want to master React fundamentals before moving to advanced tools and libraries.
-
----
-
-## 🧩 React Fundamentals
-
-- ✅ What is React? Why use it?
-- ✅ Setting up the environment (Node.js, npm, Vite or Create React App)
-- ✅ JSX syntax and rules
-- ✅ Functional Components
-- ✅ Props and children
-- ✅ State with `useState`
-- ✅ Event handling
-- ✅ Conditional rendering
+This roadmap provides a deep dive into React hooks, including behind-the-scenes behavior like re-renders, side effects, cleanup, and performance optimization.
 
 ---
 
-## 🧱 Component Architecture
+## 1. 🔁 Understanding Re-Renders in React
 
-- 📁 Component structure and file naming
-- 🔄 Props drilling vs composition
-- 🧪 Controlled vs uncontrolled components
-- 📋 Lists and keys
-- 📝 Forms and handling input
+- What causes a component to re-render
+- How React’s virtual DOM handles updates
+- React’s reconciliation process
 
 ---
 
-## 🔧 React Hooks Deep Dive
+## 2. 🧠 `useState` Deep Dive
 
-- 🔄 `useEffect` (side effects, cleanup)
-- 📦 `useState` (in-depth)
-- 📌 `useRef` (DOM refs, persist values)
-- ⚡ `useMemo` and `useCallback` (optimization basics)
-
----
-
-## 🌐 React Router
-
-- 🧭 Installing and configuring `react-router-dom`
-- 🗺️ `BrowserRouter`, `Routes`, and `Route`
-- 🔗 Navigating with `Link` and `useNavigate`
-- 🧩 Route parameters and `useParams`
-- 🧬 Nested routes and layout routes
+- What happens internally when `setState` is called
+- Why state updates are asynchronous
+- Batching of state updates
+- Re-renders triggered by state
 
 ---
 
-## 🧠 State Management
+## 3. ⚙️ `useEffect` – Side Effects & Cleanup
 
-- ⬆️ Lifting state up
-- 💬 Prop drilling issues
-- 🌐 `useContext` (basic global state)
-- 🧰 When to use third-party state libraries (Redux, Zustand — optional for now)
-
----
-
-## 🌍 API Handling and Data Fetching
-
-- 🌐 Fetching data using `fetch` and `axios`
-- ⚠️ Error handling
-- ⏳ Loading states
-- 🔄 `useEffect` with async
-- 🧠 Basic caching using local state or `useEffect`
+- What side effects are in React
+- `useEffect` lifecycle: mount, update, unmount
+- Cleanup functions: when and why they run
+- Dependency array: how it controls execution
+- Infinite loop prevention
+- Behind-the-scenes: React's effect queue
 
 ---
 
-## ⚙️ Performance & Optimization
+## 4. 📦 `useRef` – Persistent Values Without Re-render
 
-- 🔁 Component re-rendering
-- 🧼 `React.memo`
-- ⚡ `useMemo`, `useCallback` (again with practical use)
-- 💤 Lazy loading components (`React.lazy`, `Suspense`)
-- ✂️ Splitting code
+- DOM access vs persistent storage
+- Why changing `ref.current` doesn’t re-render
+- Common use cases: input focus, intervals, previous value tracking
 
 ---
 
-## 🧪 Testing & Deployment
+## 5. 🚀 `useMemo` & `useCallback` – Performance Optimization
 
-- 🧪 Intro to testing with React Testing Library and Jest
-- 🧼 Writing tests for components and events
-- 🚀 Hosting options: Netlify, Vercel, GitHub Pages
-- 🔐 Environment variables and production build
+- How memoization works
+- When to use them and when not to
+- Dependency array behavior
+- Preventing unnecessary re-renders
 
 ---
 
-> 🧠 **Pro Tip:** Practice each module with small projects. Start small, build often!
+## 6. 🌐 `useContext` – Global State Simplified
 
-Happy Coding! 💻✨
+- Context Provider and Consumer under the hood
+- Why context triggers re-renders
+- Context value stability and memoization
+
+---
+
+## 7. 📊 `useReducer` – Complex State Management
+
+- Behind the scenes: how reducers simulate Redux-style updates
+- Why reducers are useful for large state or controlled actions
+- Comparison with `useState`
+
+---
+
+## 8. 🧬 React’s Rendering Model Recap
+
+- Mounting vs updating phase
+- Commit phase and effect phase
+- How React batches and defers updates
+- Strict Mode and double rendering in development
+
+---
+
+> 📚 Each topic will be explored with hands-on examples, real-world use cases, and performance insights.

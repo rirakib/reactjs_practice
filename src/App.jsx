@@ -1,7 +1,9 @@
+import UseStateHook from "./UseStateHook"
+
 function App() {
   return (
     <>
-    <h1>Hello React Js</h1>
+      <UseStateHook />
     </>
   )
 }

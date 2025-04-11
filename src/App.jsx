@@ -1,7 +1,13 @@
+import Count from "./Count"
+import Greeting from "./Greeting"
+
 function App() {
+
+  
   return (
     <>
-    <h1>Hello React Js</h1>
+      <Greeting name="Rakib" />
+      <Count />
     </>
   )
 }
